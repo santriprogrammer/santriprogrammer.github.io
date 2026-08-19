@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0f766e,#14b8a6);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.container{
+
+    width:100%;
+    max-width:500px;
+
+}
+
+.profile-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+.profile-img{
+
+    width:150px;
+    height:150px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid #14b8a6;
+
+    margin-bottom:20px;
+
+}
+
+.profile-card h1{
+
+    color:#0f172a;
+    margin-bottom:8px;
+
+}
+
+.profile-card h3{
+
+    color:#0f766e;
+    margin-bottom:10px;
+
+}
+
+.school{
+
+    color:#666;
+    margin-bottom:20px;
+
+}
+
+.desc{
+
+    color:#555;
+    line-height:1.6;
+
+}
+
+.menu-kelas{
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    text-align:center;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.kelas10{
+
+    background:#3b82f6;
+
+}
+
+.kelas11{
+
+    background:#10b981;
+
+}
+
+.kelas12{
+
+    background:#f59e0b;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+@media(max-width:600px){
+
+.profile-card{
+
+    padding:25px;
+
+}
+
+.profile-img{
+
+    width:120px;
+    height:120px;
+
+}
+
+.btn{
+
+    font-size:18px;
+
+}
+
+}
