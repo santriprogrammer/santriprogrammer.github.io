@@ -1,181 +1,921 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="id">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+<head>
+
+  <!-- ==================================================
+       META
+       ================================================== -->
+
+  <!-- Menentukan karakter yang digunakan -->
+  <meta charset="utf-8">
+
+  <!-- Membuat website responsive di HP/tablet -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <!-- Bootstrap Icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- ==================================================
+       BOOTSTRAP CSS
+       ================================================== -->
 
-    <!-- My CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <title>Santri Programmer</title>
-  </head>
-  <body id="home">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Santri Programmer</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#profil">Profil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#grup">Grup</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#kontak">Kontak</a>
-            </li>
-          </ul>
-        </div>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+
+  <!-- ==================================================
+       BOOTSTRAP ICON
+       Digunakan untuk icon
+       ================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+  <!-- ==================================================
+       CSS SENDIRI
+       File style.css harus berada satu folder
+       dengan index.html
+       ================================================== -->
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- Judul pada tab browser -->
+
+  <title>Dofiri Al-Maduri</title>
+
+</head>
+
+
+<body id="home">
+
+
+  <!-- ==================================================
+       NAVBAR
+       ================================================== -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm fixed-top">
+
+    <div class="container">
+
+      <!-- Nama / Brand -->
+
+      <a class="navbar-brand fw-bold" href="#home">
+        Dofiri Al-Maduri
+      </a>
+
+
+      <!-- ==================================================
+           TOMBOL HAMBURGER
+
+           Tombol ini muncul di layar HP.
+           Bootstrap JavaScript diperlukan agar tombol
+           dapat membuka menu.
+           ================================================== -->
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <!-- ==================================================
+           MENU NAVBAR
+           ================================================== -->
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+
+
+          <!-- Home -->
+
+          <li class="nav-item">
+
+            <a class="nav-link active" href="#home">
+              Home
+            </a>
+
+          </li>
+
+
+          <!-- Profil -->
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="#profil">
+              Profil
+            </a>
+
+          </li>
+
+
+          <!-- Layanan -->
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="#grup">
+              Layanan
+            </a>
+
+          </li>
+
+
+          <!-- Kontak -->
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="#kontak">
+              Kontak
+            </a>
+
+          </li>
+
+
+        </ul>
+
       </div>
-    </nav>
-    <!-- Akhir Navbar -->
 
-    <!-- Jumbotron -->
+    </div>
 
-    <section class="jumbotron text-center">
-      <img src="img/SP.png" alt="Santri Programmer" width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">Santri Programmer</h1>
-      <p class="lead">Suka belajar dan berbagi ilmu tentang tenologi.</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,192L60,197.3C120,203,240,213,360,181.3C480,149,600,75,720,85.3C840,96,960,192,1080,224C1200,256,1320,224,1380,208L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
+  </nav>
 
-    <!-- Akhir Jumbotron -->
 
-    <!-- Profil -->
-    <section id="profil">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Profil</h2>
-          </div>
+  <!-- ==================================================
+       AKHIR NAVBAR
+       ================================================== -->
+
+
+
+  <!-- ==================================================
+       HERO / JUMBOTRON
+       ================================================== -->
+
+  <section class="jumbotron text-center" id="hero">
+  <canvas id="particle-network" class="particle-network"></canvas>
+    <div class="container">
+
+
+      <!-- Foto Profil -->
+
+      <img
+        src="img/SP.png"
+        alt="Dofiri Al-Maduri"
+        width="200"
+        class="rounded-circle img-thumbnail hero-image">
+
+
+      <!-- Nama -->
+
+      <h1 class="display-4 fw-bold mt-4">
+        Dofiri Al-Maduri
+      </h1>
+
+
+      <!-- Kalimat pendek -->
+
+      <p class="lead">
+        Asli dari Pulau Madura
+      </p>
+
+
+    </div>
+
+
+    <!-- ==================================================
+         WAVE HERO
+         ================================================== -->
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+      class="hero-wave">
+
+      <path
+        fill="#ffffff"
+        d="M0,192L60,197.3C120,203,240,213,360,181.3C480,149,600,75,720,85.3C840,96,960,192,1080,224C1200,256,1320,224,1380,208L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+      </path>
+
+    </svg>
+
+  </section>
+
+
+  <!-- ==================================================
+       AKHIR HERO
+       ================================================== -->
+
+
+
+  <!-- ==================================================
+       PROFIL
+       ================================================== -->
+
+  <section id="profil" class="profil-section">
+
+    <div class="container">
+
+
+      <!-- Judul Profil -->
+
+      <div class="row justify-content-center text-center mb-5">
+
+        <div class="col-lg-8">
+
+          <span class="profil-badge">
+            TENTANG SAYA
+          </span>
+
+          <h2 class="profil-title">
+            #
+            <span>Dofiri Al-Maduri</span>
+          </h2>
+
+          <p class="profil-intro">
+            Menghubungkan keilmuan, teknologi, dan kolaborasi
+            untuk menciptakan sesuatu yang bermanfaat.
+          </p>
+
         </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit animi voluptatibus pariatur doloremque aut iure molestiae veritatis omnis in tempora.</p>
-          </div>
-          <div class="col-md-4">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, vel illo, dignissimos vitae ad amet, reiciendis impedit quia eum eos voluptatibus!</p>
-          </div>
-        </div>
+
       </div>
-      
-      
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#77e0a3" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,138.7C672,128,768,128,864,149.3C960,171,1056,213,1152,224C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-    </section>
-    <!-- Akhir Profil -->
 
-    <!-- Grup -->
-    <section id="grup">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Grup Santri Programmer</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/grup/wi.jpg" class="card-img-top" alt="grupwi" />
-              <div class="card-body">
-                <p class="card-text">Bisa menghubungi Santri Programmer melalui whatsapp.</p>
-              </div>
-              <a class="btn btn-success" href="https://wa.me/6289665922111" role="button">Hubungi Whatsapp</a>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/grup/sporg.jpg" class="card-img-top" alt="grupsporg" />
-              <div class="card-body">
-                <p class="card-text">Bisa menghubungi Santri Programmer melalui telegram .</p>
-              </div>
-              <a class="btn btn-success" href="https://t.me/santriprogrammer" role="button">Hubungi Telegram Grup</a>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/grup/iddev.jpg" class="card-img-top" alt="iddev" />
-              <div class="card-body">
-                <p class="card-text">Santrie Developer School adalah tempat belajar dan diskusi yang berkaitan dengan teknologi (programmer. developer, event. loker dll).</p>
-              </div>
-              <a class="btn btn-success" href="https://t.me/santridev" role="button">Join Grup</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,224L48,234.7C96,245,192,267,288,245.3C384,224,480,160,576,160C672,160,768,224,864,234.7C960,245,1056,203,1152,202.7C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- Akhir Grup -->
 
-    <!-- Kontak -->
-    <section id="kontak">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Kontak</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
-              </div>
-            
-            <div class="mb-3">
-              <label for="pesan" class="form-label">Pesan</label>
-              <textarea class="form-control" id="pesan" rows="3"></textarea>
+      <!-- Isi Profil -->
+
+      <div class="row align-items-center g-5">
+
+
+        <!-- ==================================================
+             KOLOM KIRI
+             ================================================== -->
+
+        <div class="col-lg-6">
+
+          <div class="profil-text">
+
+            <h3>
+              Bukan sekadar mengajar,
+              <span>tetapi juga mengabdi.</span>
+            </h3>
+
+
+            <p>
+              Saya adalah seorang profesional yang memiliki minat
+              dan pengalaman di bidang
+              <strong>Ekonomi Syariah</strong> serta
+              <strong>teknologi informasi</strong>.
+            </p>
+
+
+            <p>
+              Saya tertarik mengembangkan berbagai solusi yang
+              dapat membantu masyarakat, dunia pendidikan,
+              dan pelaku usaha.
+            </p>
+
+
+            <p>
+              Dalam setiap pekerjaan, saya mengedepankan
+              integritas, inovasi, dan kualitas.
+            </p>
+
+
+            <p>
+              Bagi saya, teknologi merupakan sarana untuk membuat
+              sesuatu menjadi lebih sederhana, efektif,
+              dan memberikan manfaat yang berkelanjutan.
+            </p>
+
+
+            <!-- Quote -->
+
+            <div class="profil-highlight">
+
+              <i class="bi bi-quote"></i>
+
+              <p>
+                Mengembangkan sesuatu yang sederhana,
+                bermanfaat, dan bernilai.
+              </p>
+
             </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ==================================================
+             KOLOM KANAN
+             ================================================== -->
+
+        <div class="col-lg-6">
+
+          <div class="profil-card-wrapper">
+
+
+            <!-- Card 1 -->
+
+            <div class="profil-card">
+
+              <div class="profil-icon">
+
+                <i class="bi bi-mortarboard-fill"></i>
+
+              </div>
+
               <div>
-              <button type="submit" class="btn btn-success">Kirim</button>
-            </form>
+
+                <h4>
+                  Ekonomi Syariah
+                </h4>
+
+                <p>
+                  Konsultasi dan pendampingan dalam bidang
+                  ekonomi dan bisnis berbasis prinsip syariah.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- Card 2 -->
+
+            <div class="profil-card">
+
+              <div class="profil-icon">
+
+                <i class="bi bi-code-slash"></i>
+
+              </div>
+
+              <div>
+
+                <h4>
+                  Teknologi Digital
+                </h4>
+
+                <p>
+                  Pengembangan website, Website Kampus,
+                  Website Jurnal OJS, dan berbagai solusi digital.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- Card 3 -->
+
+            <div class="profil-card">
+
+              <div class="profil-icon">
+
+                <i class="bi bi-shield-check"></i>
+
+              </div>
+
+              <div>
+
+                <h4>
+                  Maintenance & Security
+                </h4>
+
+                <p>
+                  Menjaga website tetap aman, stabil,
+                  optimal, dan dapat berjalan dengan baik.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- Card 4 -->
+
+            <div class="profil-card">
+
+              <div class="profil-icon">
+
+                <i class="bi bi-people-fill"></i>
+
+              </div>
+
+              <div>
+
+                <h4>
+                  Kolaborasi
+                </h4>
+
+                <p>
+                  Terbuka untuk bekerja sama dengan individu,
+                  institusi, perusahaan, dan komunitas.
+                </p>
+
+              </div>
+
+            </div>
+
+
           </div>
+
         </div>
+
       </div>
-      
-    </section>
-    <!-- Akhir Kontak -->
 
-    <!-- Footer -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#198754" fill-opacity="1" d="M0,224L48,234.7C96,245,192,267,288,245.3C384,224,480,160,576,160C672,160,768,224,864,234.7C960,245,1056,203,1152,202.7C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </div>
 
-    <footer class=" bg-success shadow-sm text-white text-center p-3"> 
-      <p> Santri Programmer <i class="bi bi-bootstrap-fill text-primary"></i> 2023</p>
-    </footer>
-    <!-- Akhir Footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+    <!-- Wave Profil -->
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+      class="profil-wave">
+
+      <path
+        fill="#22CE83"
+        d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,138.7C672,128,768,128,864,149.3C960,171,1056,213,1152,224C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+
+    </svg>
+
+  </section>
+
+
+  <!-- ==================================================
+       AKHIR PROFIL
+       ================================================== -->
+
+
+
+  <!-- ==================================================
+       LAYANAN
+       ================================================== -->
+
+  <section id="grup" class="layanan-section">
+  <canvas id="particle-network-layanan" class="particle-network"></canvas>
+    <div class="container">
+
+
+      <!-- Judul Layanan -->
+
+      <div class="row text-center mb-5">
+
+        <div class="col">
+
+          <span class="layanan-badge">
+            KUNJUNGI MATERI
+          </span>
+
+          <h2 class="layanan-title">
+            Dofiri Al-Maduri
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <!-- Daftar Layanan -->
+
+      <div class="row g-4">
+
+
+        <!-- ==================================================
+             LAYANAN 1
+             ================================================== -->
+
+        <div class="col-md-4">
+
+          <div class="card layanan-card h-100">
+
+            <img
+              src="img/grup/santrieacademy.png"
+              class="card-img-top"
+              alt="Konsultan Ekonomi Syariah">
+
+
+            <div class="card-body">
+
+              <h5 class="card-title">
+                Santrie Academy 
+              </h5>
+
+              <p class="card-text">
+                Santrie Academy merupakan program pelatihan dan kelas teknologi yang dirancang untuk meningkatkan keterampilan digital secara praktis dan aplikatif. Dengan materi yang relevan, pendampingan mentor berpengalaman, serta pembelajaran dari tingkat pemula hingga profesional, Santrie Academy membantu peserta belajar, berkarya, dan siap menghadapi dunia kerja di era digital.
+              </p>
+
+            </div>
+
+
+            <div class="card-footer bg-transparent border-0 pb-4">
+
+              <a
+                class="btn btn-light layanan-button"
+                href="https://dofirialmaduri.com/santrieacademy/"
+                target="_blank">
+
+                Lihat
+
+                <i class="bi bi-arrow-right"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             LAYANAN 2
+             ================================================== -->
+
+        <div class="col-md-4">
+
+          <div class="card layanan-card h-100">
+
+            <img
+              src="img/grup/ponpesnujakadur.png"
+              class="card-img-top"
+              alt="Jasa Website dan Jurnal OJS">
+
+
+            <div class="card-body">
+
+              <h5 class="card-title">
+                Ponpes NUJA Kadur
+              </h5>
+
+              <p class="card-text">
+                Ponpes NUJA Kadur merupakan lembaga pendidikan pesantren yang memadukan pemahaman Islam, pembentukan akhlak, kewirausahaan syariah, dan penguasaan teknologi. Melalui pembelajaran Sejarah Kebudayaan Islam, Bisnis Syariah, dan Pesantren Teknologi, santri dipersiapkan menjadi generasi yang berilmu, berakhlak, mandiri, kreatif, dan siap berkontribusi bagi umat serta bangsa.
+              </p>
+
+            </div>
+
+
+            <div class="card-footer bg-transparent border-0 pb-4">
+
+              <a
+                class="btn btn-light layanan-button"
+                href="https://dofirialmaduri.com/ponpesnujakadur/"
+                target="_blank">
+
+                Lihat
+
+                <i class="bi bi-arrow-right"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             LAYANAN 3
+             ================================================== -->
+
+        <div class="col-md-4">
+
+          <div class="card layanan-card h-100">
+
+            <img
+              src="img/grup/iainatasampang.png"
+              class="card-img-top"
+              alt="Kolaborasi">
+
+
+            <div class="card-body">
+
+              <h5 class="card-title">
+                IAI NATA Sampang
+              </h5>
+
+              <p class="card-text">
+                IAI NATA Sampang merupakan perguruan tinggi yang mengembangkan pendidikan berbasis nilai-nilai syariah dengan memadukan keilmuan, profesionalisme, dan pengabdian kepada masyarakat. Melalui bidang Ekonomi Syariah, Perbankan Syariah, dan Lembaga Amil Zakat (ZISWAF), mahasiswa dipersiapkan menjadi insan yang berilmu, berakhlak, kompeten, dan mampu memberikan kontribusi nyata bagi umat.
+              </p>
+
+            </div>
+
+
+            <div class="card-footer bg-transparent border-0 pb-4">
+
+              <a
+                class="btn btn-light layanan-button"
+                href="https://dofirialmaduri.com/iainatasampang/"
+                target="_blank">
+
+                Lihat
+
+                <i class="bi bi-arrow-right"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <!-- Wave Layanan -->
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+      class="layanan-wave">
+
+      <path
+        fill="#ffffff"
+        d="M0,224L48,234.7C96,245,192,267,288,245.3C384,224,480,160,576,160C672,160,768,224,864,234.7C960,245,1056,203,1152,202.7C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+
+    </svg>
+
+  </section>
+
+
+  <!-- ==================================================
+       AKHIR LAYANAN
+       ================================================== -->
+
+
+
+  <!-- ==================================================
+       KONTAK
+       ================================================== -->
+
+  <section id="kontak" class="kontak-section">
+
+    <div class="container">
+
+
+      <!-- Judul -->
+
+      <div class="row text-center mb-5">
+
+        <div class="col">
+
+          <span class="kontak-badge">
+            HUBUNGI SAYA
+          </span>
+
+          <h2>
+            Mari Terhubung
+          </h2>
+
+          <p class="text-muted">
+            Punya pertanyaan, ide, atau ingin berkolaborasi?
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Form -->
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-6">
+
+          <form class="kontak-form">
+
+
+            <!-- Nama -->
+
+            <div class="mb-3">
+
+              <label
+                for="name"
+                class="form-label">
+
+                Nama Lengkap
+
+              </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Masukkan nama Anda">
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="mb-3">
+
+              <label
+                for="email"
+                class="form-label">
+
+                Email
+
+              </label>
+
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="nama@email.com">
+
+            </div>
+
+
+            <!-- Pesan -->
+
+            <div class="mb-4">
+
+              <label
+                for="pesan"
+                class="form-label">
+
+                Pesan
+
+              </label>
+
+              <textarea
+                class="form-control"
+                id="pesan"
+                rows="5"
+                placeholder="Tuliskan pesan Anda..."></textarea>
+
+            </div>
+
+
+            <!-- Tombol -->
+
+            <button
+              type="submit"
+              class="btn btn-success kontak-button">
+
+              Kirim Pesan
+
+              <i class="bi bi-send"></i>
+
+            </button>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       AKHIR KONTAK
+       ================================================== -->
+
+
+
+  <!-- ==================================================
+       FOOTER WAVE
+       ================================================== -->
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+    class="footer-wave">
+
+    <path
+      fill="#198754"
+      d="M0,224L48,234.7C96,245,192,267,288,245.3C384,224,480,160,576,160C672,160,768,224,864,234.7C960,245,1056,203,1152,202.7C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    </path>
+
+  </svg>
+
+
+
+  <!-- ==================================================
+       FOOTER
+       ================================================== -->
+
+  <footer class="footer bg-success text-white text-center">
+
+    <div class="container">
+
+      <p>
+        Dofiri Al-Maduri
+
+        <i class="bi bi-bootstrap-fill"></i>
+
+        2023–2026
+      </p>
+
+    </div>
+
+  </footer>
+
+<!-- =====================================================
+     WHATSAPP FLOATING BUTTON
+     ===================================================== -->
+
+<div class="whatsapp-floating">
+
+    <a
+    href="https://wa.me/6285257059250?text=%2AAssalamualaikum%20Wr.%20Wb.%2A%0AMohon%20Maaf%20Pak%20%2ADofiri%20Al-Maduri%2A%0ASaya%20Ingin%20Bertanya%2C%20Kiranya%20Berkenan%20%3F"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-button"
+    aria-label="Chat WhatsApp Admin"
+>
+
+        <!-- Radar / Gelombang -->
+        <span class="wa-radar radar-1"></span>
+        <span class="wa-radar radar-2"></span>
+        <span class="wa-radar radar-3"></span>
+
+        <!-- Lingkaran berputar -->
+        <span class="wa-orbit orbit-1"></span>
+        <span class="wa-orbit orbit-2"></span>
+
+        <!-- Logo WhatsApp -->
+        <span class="whatsapp-icon">
+
+            <svg
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+            >
+                <path
+                    fill="#ffffff"
+                    d="M19.11 17.33c-.27-.14-1.59-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.33-1.56-1.49-1.82-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26s.98 2.62 1.11 2.8c.14.18 1.93 2.95 4.67 4.13.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.59-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
+                />
+
+                <path
+                    fill="#ffffff"
+                    d="M16 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.59 4.38 1.63 6.22L3.2 28.8l6.77-1.59A12.75 12.75 0 0 0 16 28.8c7.07 0 12.8-5.73 12.8-12.8S23.07 3.2 16 3.2zm0 23.4c-2.13 0-4.1-.63-5.76-1.72l-.41-.27-4.02.94.96-3.91-.27-.43A10.57 10.57 0 0 1 5.43 16C5.43 10.17 10.17 5.43 16 5.43S26.57 10.17 26.57 16 21.83 26.6 16 26.6z"
+                />
+            </svg>
+
+        </span>
+
+        <!-- Titik kecil -->
+        <span class="wa-status"></span>
+
+    </a>
+
+</div>
+
+  <!-- ==================================================
+       BOOTSTRAP JAVASCRIPT
+       
+       INI PENTING!
+
+       Script ini membuat tombol hamburger Navbar
+       berfungsi pada perangkat mobile.
+
+       Saya sengaja TIDAK menggunakan integrity
+       agar tidak terjadi error pemuatan script.
+       ================================================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="particles.js"></script>
+
+  <!-- BACKSOUND WEBSITE -->
+<audio id="background-music" loop>
+    <source src="audio/backsound.mp3" type="audio/mpeg">
+</audio>
+
+<!-- TOMBOL MUSIC -->
+<button id="music-button" aria-label="Putar atau hentikan musik">
+    <i class="bi bi-volume-up-fill"></i>
+</button>
+
+<script src="particles.js"></script>
+<script src="music.js"></script>
+  
+</body>
+
 </html>
-
