@@ -1,12 +1,1470 @@
-.jumbotron {
-  padding-top: 8rem;
-  background-color: #808080;
+/* =====================================================
+   RESET DASAR
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
 }
 
-#grup {
-  background-color: #22CE83;
+
+/*
+   Membuat perpindahan ketika klik menu
+   menjadi halus.
+*/
+
+html {
+  scroll-behavior: smooth;
 }
+
+
+/*
+   Pengaturan dasar seluruh halaman.
+*/
+
+body {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #212529;
+
+  background-color: #ffffff;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.navbar {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+
+/*
+   Jarak antar menu.
+*/
+
+.navbar .nav-link {
+  margin-left: 10px;
+
+  transition: 0.3s ease;
+}
+
+
+/*
+   Efek ketika mouse diarahkan ke menu.
+*/
+
+.navbar .nav-link:hover {
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+
+/* =====================================================
+   HERO / JUMBOTRON
+   ===================================================== */
+
+.jumbotron {
+
+  /*
+     Karena navbar menggunakan fixed-top,
+     Hero diberi jarak dari atas.
+  */
+
+  padding-top: 8rem;
+
+  background-color: #22CE83;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/*
+   Foto profil.
+*/
+
+.hero-image {
+
+  border: 5px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.15);
+
+  transition: 0.3s ease;
+}
+
+
+/*
+   Efek ketika foto disentuh mouse.
+*/
+
+.hero-image:hover {
+  transform: scale(1.03);
+}
+
+
+/*
+   Nama pada Hero.
+*/
+
+.jumbotron h1 {
+  margin-top: 25px;
+
+  font-weight: 700;
+}
+
+
+/*
+   Tulisan di bawah nama.
+*/
+
+.jumbotron .lead {
+  opacity: 0.95;
+}
+
+
+/*
+   Wave Hero.
+*/
+
+.hero-wave {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 40px;
+
+  margin-bottom: -1px;
+}
+
+
+
+/* =====================================================
+   SECTION UMUM
+   ===================================================== */
 
 section {
   padding-top: 5rem;
+}
+
+
+/*
+   Ketika menu navbar diklik,
+   section tidak tertutup navbar.
+*/
+
+section[id] {
+  scroll-margin-top: 70px;
+}
+
+
+
+/* =====================================================
+   PROFIL
+   ===================================================== */
+
+.profil-section {
+  padding-top: 7rem;
+
+  background-color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* ---------- Badge Profil ---------- */
+
+.profil-badge {
+
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid #22CE83;
+
+  border-radius: 50px;
+
+  color: #22CE83;
+
+  background-color: #f4fff9;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+
+/* ---------- Judul Profil ---------- */
+
+.profil-title {
+
+  margin-bottom: 15px;
+
+  color: #212529;
+
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+
+/*
+   Kata yang diberi warna hijau.
+*/
+
+.profil-title span {
+  color: #22CE83;
+}
+
+
+/* ---------- Intro ---------- */
+
+.profil-intro {
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #777;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+/* ---------- Teks Profil ---------- */
+
+.profil-text {
+  padding-right: 30px;
+}
+
+
+.profil-text h3 {
+
+  margin-bottom: 25px;
+
+  color: #212529;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+.profil-text h3 span {
+  color: #22CE83;
+}
+
+
+.profil-text p {
+
+  margin-bottom: 16px;
+
+  color: #666;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+
+.profil-text strong {
+  color: #212529;
+}
+
+
+
+/* ---------- Quote ---------- */
+
+.profil-highlight {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 30px;
+
+  padding: 18px 20px;
+
+  border-left: 4px solid #22CE83;
+
+  background-color: #f7fffb;
+
+  border-radius: 0 12px 12px 0;
+}
+
+
+.profil-highlight i {
+
+  color: #22CE83;
+
+  font-size: 30px;
+}
+
+
+.profil-highlight p {
+
+  margin: 0;
+
+  color: #444;
+
+  font-size: 14px;
+
+  font-style: italic;
+}
+
+
+
+/* ---------- Container Card Profil ---------- */
+
+.profil-card-wrapper {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+
+/* ---------- Card Profil ---------- */
+
+.profil-card {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding: 20px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/*
+   Efek hover.
+*/
+
+.profil-card:hover {
+
+  transform: translateY(-5px);
+
+  border-color: #22CE83;
+
+  box-shadow:
+    0 15px 35px rgba(34, 206, 131, 0.12);
+}
+
+
+/* ---------- Icon ---------- */
+
+.profil-icon {
+
+  flex-shrink: 0;
+
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background-color: #eafff4;
+
+  color: #22CE83;
+
+  font-size: 22px;
+}
+
+
+/* ---------- Judul Card ---------- */
+
+.profil-card h4 {
+
+  margin: 2px 0 7px;
+
+  color: #212529;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+/* ---------- Isi Card ---------- */
+
+.profil-card p {
+
+  margin: 0;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* ---------- Wave Profil ---------- */
+
+.profil-wave {
+
+  display: block;
+
+  width: 100%;
+
+  margin-top: 80px;
+
+  margin-bottom: -1px;
+}
+
+
+
+/* =====================================================
+   LAYANAN
+   ===================================================== */
+
+#grup {
+
+  background-color: #22CE83;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* Badge layanan */
+
+.layanan-badge {
+
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* Judul */
+
+.layanan-title {
+  font-weight: 700;
+}
+
+
+/* ---------- Card ---------- */
+
+.layanan-card {
+
+  overflow: hidden;
+
+  border: none;
+
+  border-radius: 18px;
+
+  color: #212529;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.layanan-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ---------- Gambar ---------- */
+
+.layanan-card img {
+
+  height: 220px;
+
+  object-fit: cover;
+}
+
+
+/* ---------- Judul ---------- */
+
+.layanan-card .card-title {
+
+  font-weight: 700;
+}
+
+
+/* ---------- Deskripsi ---------- */
+
+.layanan-card .card-text {
+
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ---------- Tombol ---------- */
+
+.layanan-button {
+
+  color: #198754;
+
+  font-weight: 600;
+
+  border-radius: 50px;
+}
+
+
+.layanan-button:hover {
+
+  color: #ffffff;
+
+  background-color: #198754;
+}
+
+
+/* ---------- Wave ---------- */
+
+.layanan-wave {
+
+  display: block;
+
+  width: 100%;
+
+  margin-top: 60px;
+
+  margin-bottom: -1px;
+}
+
+
+
+/* =====================================================
+   KONTAK
+   ===================================================== */
+
+.kontak-section {
+
+  background-color: #ffffff;
+}
+
+
+/* Badge */
+
+.kontak-badge {
+
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #22CE83;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* ---------- Form ---------- */
+
+.kontak-form {
+
+  padding: 30px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Label */
+
+.kontak-form .form-label {
+  font-weight: 600;
+}
+
+
+/* Input */
+
+.kontak-form .form-control {
+
+  padding: 12px 15px;
+
+  border-radius: 10px;
+
+  border: 1px solid #dddddd;
+}
+
+
+/*
+   Warna ketika input sedang dipilih.
+*/
+
+.kontak-form .form-control:focus {
+
+  border-color: #22CE83;
+
+  box-shadow:
+    0 0 0 0.2rem rgba(34, 206, 131, 0.15);
+}
+
+
+/* Tombol */
+
+.kontak-button {
+
+  padding: 10px 22px;
+
+  border-radius: 50px;
+
+  font-weight: 600;
+}
+
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer-wave {
+
+  display: block;
+
+  width: 100%;
+
+  margin-bottom: -1px;
+}
+
+
+.footer {
+
+  padding: 20px;
+}
+
+
+.footer p {
+  margin: 0;
+}
+
+
+.footer i {
+  margin-left: 5px;
+}
+
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+   ===================================================== */
+
+@media (max-width: 991px) {
+
+  .profil-section {
+    padding-top: 5rem;
+  }
+
+  .profil-text {
+    padding-right: 0;
+  }
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE HP
+   ===================================================== */
+
+@media (max-width: 576px) {
+
+
+  /* Hero */
+
+  .jumbotron {
+    padding-top: 7rem;
+  }
+
+
+  .hero-image {
+    width: 160px;
+  }
+
+
+  /* Profil */
+
+  .profil-title {
+    font-size: 2.2rem;
+  }
+
+
+  .profil-text h3 {
+    font-size: 1.7rem;
+  }
+
+
+  .profil-intro {
+    font-size: 0.95rem;
+  }
+
+
+  .profil-card {
+    padding: 16px;
+  }
+
+
+  .profil-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 19px;
+  }
+
+
+  .profil-card h4 {
+    font-size: 15px;
+  }
+
+
+  .profil-card p {
+    font-size: 12px;
+  }
+
+
+  /* Layanan */
+
+  .layanan-card img {
+    height: 200px;
+  }
+
+
+  /* Kontak */
+
+  .kontak-form {
+    padding: 20px;
+  }
+
+}
+
+/* =====================================================
+   WHATSAPP FLOATING BUTTON
+   ===================================================== */
+
+/* Posisi utama */
+.whatsapp-floating {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 75px;
+    height: 75px;
+
+    z-index: 99999;
+
+    /* Supaya animasi tidak mengganggu layout */
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   TOMBOL UTAMA
+   ===================================================== */
+
+.whatsapp-button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+
+    margin: 6px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #25d366,
+            #16a34a
+        );
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 25px rgba(20, 160, 70, 0.35),
+        0 0 20px rgba(100, 255, 80, 0.25);
+
+    pointer-events: auto;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation: whatsapp-float 3s ease-in-out infinite;
+}
+
+
+/* Efek ketika mouse diarahkan */
+.whatsapp-button:hover {
+
+    transform: scale(1.12);
+
+    box-shadow:
+        0 12px 35px rgba(20, 160, 70, 0.5),
+        0 0 35px rgba(150, 255, 70, 0.5);
+}
+
+
+/* =====================================================
+   LOGO WHATSAPP
+   ===================================================== */
+
+.whatsapp-icon {
+
+    position: relative;
+
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+
+    animation: whatsapp-icon-pulse 2s ease-in-out infinite;
+}
+
+
+.whatsapp-icon svg {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+}
+
+
+/* =====================================================
+   RADAR / GELOMBANG
+   ===================================================== */
+
+.wa-radar {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 62px;
+    height: 62px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(142, 255, 67, 0.75);
+
+    transform: translate(-50%, -50%) scale(1);
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    opacity: 0;
+
+    animation: radar-wave 3s ease-out infinite;
+}
+
+
+/* Gelombang kedua */
+.radar-2 {
+    animation-delay: 1s;
+}
+
+
+/* Gelombang ketiga */
+.radar-3 {
+    animation-delay: 2s;
+}
+
+
+/* =====================================================
+   LINGKARAN YANG BERPUTAR
+   ===================================================== */
+
+.wa-orbit {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 74px;
+    height: 74px;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* Lingkaran pertama */
+.orbit-1 {
+
+    border: 2px solid transparent;
+
+    border-top-color: rgba(182, 255, 70, 0.95);
+
+    border-right-color: rgba(182, 255, 70, 0.45);
+
+    animation: orbit-spin 2.8s linear infinite;
+}
+
+
+/* Lingkaran kedua */
+.orbit-2 {
+
+    width: 68px;
+    height: 68px;
+
+    border: 1px solid transparent;
+
+    border-bottom-color: rgba(255, 230, 70, 0.8);
+
+    border-left-color: rgba(255, 230, 70, 0.3);
+
+    animation: orbit-spin-reverse 2s linear infinite;
+}
+
+
+/* =====================================================
+   TITIK STATUS
+   ===================================================== */
+
+.wa-status {
+
+    position: absolute;
+
+    right: 1px;
+    bottom: 3px;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #d9ff48;
+
+    border: 2px solid #ffffff;
+
+    z-index: 20;
+
+    box-shadow:
+        0 0 8px rgba(200, 255, 50, 0.9);
+
+    animation: status-blink 1.5s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   ANIMASI MELAYANG
+   ===================================================== */
+
+@keyframes whatsapp-float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   ANIMASI LOGO
+   ===================================================== */
+
+@keyframes whatsapp-icon-pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   ANIMASI RADAR
+   ===================================================== */
+
+@keyframes radar-wave {
+
+    0% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.8);
+
+        opacity: 0.8;
+    }
+
+    70% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(2);
+
+        opacity: 0.15;
+    }
+
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(2.4);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================================
+   ANIMASI LINGKARAN
+   ===================================================== */
+
+@keyframes orbit-spin {
+
+    from {
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
+
+}
+
+
+@keyframes orbit-spin-reverse {
+
+    from {
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
+
+}
+
+
+/* =====================================================
+   ANIMASI STATUS
+   ===================================================== */
+
+@keyframes status-blink {
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.25);
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .whatsapp-floating {
+
+        right: 17px;
+        bottom: 17px;
+
+        width: 68px;
+        height: 68px;
+    }
+
+
+    .whatsapp-button {
+
+        width: 56px;
+        height: 56px;
+
+        margin: 6px;
+    }
+
+
+    .whatsapp-icon {
+
+        width: 33px;
+        height: 33px;
+    }
+
+
+    .wa-radar {
+
+        width: 56px;
+        height: 56px;
+    }
+
+
+    .wa-orbit {
+
+        width: 67px;
+        height: 67px;
+    }
+
+
+    .orbit-2 {
+
+        width: 61px;
+        height: 61px;
+    }
+
+}
+/* =====================================================
+   HERO PARTICLE NETWORK
+   ===================================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    background: #20c98a;
+}
+
+
+/* =====================================================
+   PARTICLE NETWORK
+   Canvas hanya sebagai background
+===================================================== */
+
+.particle-network {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    display: block;
+}
+/* =====================================================
+   LAYANAN
+===================================================== */
+
+.layanan-section {
+    position: relative;
+
+    background-color: #22CE83;
+
+    overflow: hidden;
+}
+
+.layanan-section .container {
+    position: relative;
+
+    z-index: 1;
+}
+
+/* Isi hero berada DI ATAS canvas */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   GLOW HALUS BACKGROUND
+   ===================================================== */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: 50%;
+    top: 35%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(210, 255, 130, 0.10) 0%,
+            rgba(210, 255, 130, 0.04) 35%,
+            transparent 70%
+        );
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    animation: hero-glow 8s ease-in-out infinite;
+}
+
+
+@keyframes hero-glow {
+
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.25);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+
+}
+
+
+/* =====================================================
+   FOTO HERO
+   ===================================================== */
+
+.hero-content img {
+    position: relative;
+    z-index: 3;
+}
+
+
+/* =====================================================
+   TEXT HERO
+   ===================================================== */
+
+.hero-content h1,
+.hero-content p {
+    position: relative;
+    z-index: 3;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .hero::before {
+
+        width: 350px;
+        height: 350px;
+    }
+
+}
+
+/* =====================================================
+   MUSIC BUTTON
+   Posisi kiri bawah
+   Sejajar dengan WhatsApp kanan bawah
+   ===================================================== */
+
+#music-button {
+
+    position: fixed;
+
+    left: 25px;
+    bottom: 25px;
+
+    width: 62px;
+    height: 62px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #25d366,
+        #198754
+    );
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    z-index: 99999;
+
+    box-shadow:
+        0 8px 25px rgba(20, 160, 70, 0.35),
+        0 0 20px rgba(150, 255, 70, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation: music-float 3s ease-in-out infinite;
+}
+
+
+/* Hover */
+
+#music-button:hover {
+
+    transform: scale(1.12);
+
+    box-shadow:
+        0 12px 35px rgba(20, 160, 70, 0.5),
+        0 0 30px rgba(150, 255, 70, 0.4);
+}
+
+
+/* Animasi naik turun */
+
+@keyframes music-float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    #music-button {
+
+        left: 17px;
+        bottom: 17px;
+
+        width: 56px;
+        height: 56px;
+
+        font-size: 21px;
+    }
+
 }
